@@ -1,96 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional resume of Dmitrii Gaiduk, Operating Director (COO) / General Manager." />
-  <title>Dmitrii Gaiduk — Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8yQ4f1L3M6v8f0vZ4h7Yd2n6uYQm1wA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dmitrii Gaiduk — executive profile, digital transformation leader, and cross-industry operator." />
+  <meta property="og:title" content="Dmitrii Gaiduk — Executive Resume" />
+  <meta property="og:description" content="Premium one-page resume with bilingual storytelling timeline." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMG_0033.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dmitrii Gaiduk — Executive Resume" />
+  <meta name="twitter:description" content="COO / General Manager. Operations, strategy, digital transformation." />
+  <title>Dmitrii Gaiduk — Executive Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
-  <div class="page" role="document">
-    <aside class="sidebar" aria-label="Personal profile sidebar">
-      <div class="profile-photo-wrap">
-        <img src="IMG_0033.jpeg" alt="Portrait of Dmitrii Gaiduk" class="profile-photo" />
+  <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+
+  <aside id="sidebar" class="sidebar" aria-label="Profile navigation">
+    <img src="IMG_0033.jpeg" srcset="IMG_0033.jpeg 1x" alt="Portrait of Dmitrii Gaiduk" class="sidebar-photo" loading="lazy" />
+    <h1 data-i18n="name">Dmitrii Gaiduk</h1>
+    <p class="role" data-i18n="role">COO / General Manager</p>
+    <ul class="stats">
+      <li data-i18n="statAge">Age: 38</li>
+      <li data-i18n="statLocation">Location: Moscow, Russia</li>
+      <li data-i18n="statExp">Experience: 16+ years</li>
+    </ul>
+    <nav aria-label="Sections">
+      <a href="#about" class="nav-link">About</a><a href="#experience" class="nav-link">Experience</a><a href="#education" class="nav-link">Education</a><a href="#skills" class="nav-link">Skills</a><a href="#testimonials" class="nav-link">Testimonials</a><a href="#contact" class="nav-link">Contacts</a>
+    </nav>
+    <div class="switchers">
+      <div class="lang" role="group" aria-label="Language switcher"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="ru">RU</button></div>
+      <button id="themeToggle" aria-label="Toggle theme">🌗</button>
+    </div>
+  </aside>
+
+  <main>
+    <header class="hero" id="top">
+      <div class="parallax layer-back"></div><div class="parallax layer-mid"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Executive Portfolio</p>
+        <h2 data-i18n="heroTitle">Driving Growth Through Operations, People & Technology</h2>
+        <p data-i18n="heroTagline">I build resilient businesses by translating strategic goals into measurable execution.</p>
+        <a href="#contact" class="cta" data-i18n="download">Download CV</a>
       </div>
-      <h1 data-i18n="nameEn">Dmitrii Gaiduk</h1>
-      <p class="name-ru" data-i18n="nameRu">Гайдук Дмитрий Валерьевич</p>
-      <p class="headline" data-i18n="position">Operating Director (COO) / General Manager</p>
+    </header>
 
-      <ul class="detail-list" aria-label="Key personal details">
-        <li><i class="fa-solid fa-cake-candles"></i><span data-i18n="age">37 years old, born 14 Aug 1988</span></li>
-        <li><i class="fa-solid fa-location-dot"></i><span data-i18n="location">Moscow, Russia. Willing to relocate & travel.</span></li>
-        <li><i class="fa-solid fa-passport"></i><span data-i18n="citizenship">Russian citizenship. Authorized to work in Russia.</span></li>
-        <li><i class="fa-solid fa-briefcase"></i><span data-i18n="employment">Desired employment: Full-time, on-site.</span></li>
-        <li><i class="fa-solid fa-language"></i><span data-i18n="langs">Russian (native), English (C1 advanced).</span></li>
-        <li><i class="fa-solid fa-car"></i><span data-i18n="license">Driver's licence A, B; own car.</span></li>
-      </ul>
+    <section id="about" class="panel reveal"><h3 data-i18n="about">About</h3><p data-i18n="aboutText"></p></section>
+    <section id="experience" class="panel"><h3 data-i18n="experience">Experience</h3><div class="timeline" id="timeline"></div></section>
+    <section id="education" class="panel reveal"><h3 data-i18n="education">Education</h3><p data-i18n="educationText"></p></section>
+    <section id="skills" class="panel"><h3 data-i18n="skills">Skills & KPIs</h3><div class="kpis"><div><span id="expCounter">0</span><small data-i18n="years">years</small></div><div><span id="teamCounter">0</span><small data-i18n="team">max team</small></div><div><span id="projectsCounter">0</span><small data-i18n="projects">projects</small></div></div><div class="skill-bars" id="skillBars"></div></section>
+    <section id="testimonials" class="panel"><h3 data-i18n="testimonials">Testimonials</h3><div class="quotes" id="quotes"></div></section>
+    <section id="contact" class="panel reveal"><h3 data-i18n="contact">Contacts</h3><p>Email: <a href="mailto:dmitrii@example.com">dmitrii@example.com</a> · Telegram: @dmitrii_gaiduk · LinkedIn: /in/dmitrii-gaiduk</p></section>
+    <footer><p>© <span id="year"></span> Dmitrii Gaiduk</p></footer>
+  </main>
 
-      <div class="quick-contacts" aria-label="Quick contacts">
-        <a href="tel:+79629116660"><i class="fa-solid fa-phone"></i> +7 (962) 911-6660</a>
-        <a href="mailto:dv-aid@mail.ru"><i class="fa-solid fa-envelope"></i> dv-aid@mail.ru</a>
-        <a href="https://wa.me/79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://t.me/+79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
-      </div>
-    </aside>
-
-    <main class="main-content" aria-label="Resume content">
-      <header class="main-header">
-        <nav class="tabs" aria-label="Resume sections navigation">
-          <a href="#about" data-i18n="tabAbout">About</a>
-          <a href="#experience" data-i18n="tabExp">Experience</a>
-          <a href="#education" data-i18n="tabEdu">Education</a>
-          <a href="#skills" data-i18n="tabSkills">Skills</a>
-          <a href="#contacts" data-i18n="tabContacts">Contacts</a>
-        </nav>
-        <div class="lang-switcher" role="group" aria-label="Language switcher">
-          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
-        </div>
-      </header>
-
-      <section id="about" class="section reveal" aria-labelledby="about-title">
-        <h2 id="about-title"><i class="fa-solid fa-user-tie"></i> <span data-i18n="aboutTitle">About me</span></h2>
-        <p data-i18n="aboutText"></p>
-      </section>
-
-      <section id="experience" class="section" aria-labelledby="exp-title">
-        <h2 id="exp-title" class="reveal"><i class="fa-solid fa-briefcase"></i> <span data-i18n="expTitle">Experience</span></h2>
-        <div id="timeline" class="timeline"></div>
-      </section>
-
-      <section id="education" class="section reveal" aria-labelledby="edu-title">
-        <h2 id="edu-title"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="eduTitle">Education</span></h2>
-        <div class="card">
-          <p data-i18n="eduMain"></p>
-          <p data-i18n="eduCourses"></p>
-        </div>
-      </section>
-
-      <section id="skills" class="section reveal" aria-labelledby="skills-title">
-        <h2 id="skills-title"><i class="fa-solid fa-gears"></i> <span data-i18n="skillsTitle">Skills</span></h2>
-        <div id="skills-cloud" class="skills-cloud"></div>
-      </section>
-
-      <section id="contacts" class="section reveal" aria-labelledby="contacts-title">
-        <h2 id="contacts-title"><i class="fa-solid fa-address-card"></i> <span data-i18n="contactsTitle">Contacts</span></h2>
-        <div class="contact-grid">
-          <a href="tel:+79629116660"><i class="fa-solid fa-phone"></i> +7 (962) 911-6660</a>
-          <a href="mailto:dv-aid@mail.ru"><i class="fa-solid fa-envelope"></i> dv-aid@mail.ru</a>
-          <a href="https://wa.me/79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a href="https://t.me/+79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
-        <a class="cta" href="mailto:dv-aid@mail.ru" data-i18n="cta">Let’s discuss opportunities</a>
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
