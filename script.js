@@ -1,114 +1,207 @@
-const t = {
-  en: {
-    nameEn: 'Dmitrii Gaiduk', nameRu: 'Gaiduk Dmitrii Valerievich',
-    position: 'Operating Director (COO) / General Manager',
-    age: '37 years old, born 14 Aug 1988',
-    location: 'Moscow, Russia. Willing to relocate & travel.',
-    citizenship: 'Russian citizenship. Authorized to work in Russia.',
-    employment: 'Desired employment: Full-time, on-site.',
-    langs: 'Russian (native), English (C1 advanced).',
-    license: "Driver's licence A, B; own car.",
-    tabAbout: 'About', tabExp: 'Experience', tabEdu: 'Education', tabSkills: 'Skills', tabContacts: 'Contacts',
-    aboutTitle: 'About me',
-    aboutText: 'Executive leader with 16+ years across operations, technology, and commercial management. Dmitrii has built and transformed divisions from scratch, led teams up to 1,000 people, and delivered digital transformation strategies with measurable business outcomes. He combines organizational design, Capex/Opex budgeting, IT product delivery, and government relations to optimize cost, speed, and quality. Passionate about innovation and mentoring high-performing teams.',
-    expTitle: 'Experience', eduTitle: 'Education', skillsTitle: 'Skills', contactsTitle: 'Contacts',
-    eduMain: 'Russian State Academy of Intellectual Property (Moscow) — 2010. Degree in Economics & Management, focus on Intellectual Property Management.',
-    eduCourses: 'Professional development: 2016 — Eduson business school (30+ management courses). 2015 — Eduson courses in quality management and public speaking.',
-    cta: 'Let’s discuss opportunities'
-  },
+const content = {
   ru: {
-    nameEn: 'Дмитрий Гайдук', nameRu: 'Гайдук Дмитрий Валерьевич',
-    position: 'Операционный директор (COO) / Генеральный менеджер',
-    age: '37 лет, дата рождения: 14 августа 1988',
-    location: 'Москва, Россия. Готов к переезду и командировкам.',
-    citizenship: 'Гражданство: РФ. Разрешение на работу в РФ.',
-    employment: 'Желаемая занятость: полная, офисный формат.',
-    langs: 'Русский (родной), английский (C1 advanced).',
-    license: 'Водительские права категорий A, B; личный автомобиль.',
-    tabAbout: 'О себе', tabExp: 'Опыт', tabEdu: 'Образование', tabSkills: 'Навыки', tabContacts: 'Контакты',
-    aboutTitle: 'О себе',
-    aboutText: 'Руководитель с опытом 16+ лет в операционном, техническом и коммерческом управлении. Дмитрий с нуля создавал и трансформировал подразделения, управлял командами до 1 000 человек, формировал и реализовывал стратегии цифровой трансформации с измеримым бизнес-эффектом. Экспертиза: оргдизайн, бюджетирование Capex/Opex, разработка IT-продуктов, взаимодействие с госструктурами, оптимизация затрат и процессов. Увлечён инновациями и развитием сильных команд.',
-    expTitle: 'Опыт работы', eduTitle: 'Образование', skillsTitle: 'Навыки', contactsTitle: 'Контакты',
-    eduMain: 'Российская государственная академия интеллектуальной собственности (Москва) — 2010. Экономика и управление, специализация: управление интеллектуальной собственностью.',
-    eduCourses: 'Повышение квалификации: 2016 — бизнес-школа Eduson (30+ курсов по менеджменту). 2015 — курсы Eduson по управлению качеством и публичным выступлениям.',
-    cta: 'Свяжитесь для обсуждения сотрудничества'
+    fullName: 'Дмитрий Гайдук',
+    position: 'Операционный директор (COO) / Исполнительный директор',
+    birth: '14 августа 1988 г. • 37 лет',
+    location: 'Москва • готов к переезду и командировкам',
+    citizenship: 'Гражданство: Россия',
+    employment: 'Занятость: полная, офис',
+    languages: 'Языки: русский (родной), English (C1)',
+    driving: 'Права: A, B • личный автомобиль',
+    navAbout: 'Обо мне', navExperience: 'Опыт', navEducation: 'Образование', navCourses: 'Курсы', navSkills: 'Навыки', navContacts: 'Контакты',
+    downloadCv: 'Скачать PDF',
+    aboutTitle: 'Обо мне',
+    aboutText: 'Более 16 лет управляю операционной, технической и коммерческой функциями в международных компаниях. Создаю команды и департаменты с нуля, управляю масштабом до 1000 человек, реализую цифровые трансформации, снижаю издержки и повышаю управляемость бизнеса через процессы, данные и сильную культуру исполнения.',
+    experienceTitle: 'Опыт работы',
+    educationTitle: 'Образование',
+    coursesTitle: 'Курсы и дополнительное обучение',
+    skillsTitle: 'Навыки',
+    testimonialsTitle: 'Отзывы / Highlights',
+    contactsTitle: 'Контакты',
+    contactBtn: 'Связаться',
+    detailsBtn: 'Подробнее'
+  },
+  en: {
+    fullName: 'Dmitrii Gaiduk',
+    position: 'COO / Executive Director',
+    birth: 'August 14, 1988 • 37 y.o.',
+    location: 'Moscow • open to relocation and business travel',
+    citizenship: 'Citizenship: Russia',
+    employment: 'Employment: full-time, office',
+    languages: 'Languages: Russian (native), English (C1)',
+    driving: 'Driving license: A, B • own car',
+    navAbout: 'About', navExperience: 'Experience', navEducation: 'Education', navCourses: 'Courses', navSkills: 'Skills', navContacts: 'Contacts',
+    downloadCv: 'Download PDF',
+    aboutTitle: 'About',
+    aboutText: 'I bring 16+ years of operational, technical and commercial leadership in international companies. I build teams and departments from scratch, lead organizations of up to 1,000 people, drive digital transformation, reduce costs and improve execution through structure, data and culture.',
+    experienceTitle: 'Experience',
+    educationTitle: 'Education',
+    coursesTitle: 'Courses & Additional Learning',
+    skillsTitle: 'Skills',
+    testimonialsTitle: 'Testimonials / Highlights',
+    contactsTitle: 'Contacts',
+    contactBtn: 'Contact Me',
+    detailsBtn: 'Details'
   }
 };
 
-const experience = {
-  en: [
-    ['Mar 2022 – Present','Atom (AO Kama), Moscow','Director of Online Services',['Built core operations for Russia’s Atom EV start-up, creating 15+ departments and a 200+ team.','Led strategic and financial planning with budgets above 2B RUB; optimized IT, HR, and finance processes.','Launched key services: charging infrastructure, fleet management, after-sales, remote diagnostics; represented Atom in government and investor forums in China.']],
-    ['Apr 2021 – Feb 2022','KFC (YUM! Restaurants International Russia, CIS & CEE)','Head of Technical Solutions & Standards',['Defined digital strategy across Russia, CIS, and CEE; deployed restaurant digital platforms.','Set technical standards, managed vendor ecosystem, opened new markets from technology side.','Oversaw digital transformation, enterprise architecture, strategic planning, and multi-year budgeting.']],
-    ['Mar 2019 – Mar 2021','KFC, Russia/CIS/CEE','Head of Project Office',['Managed portfolio of key IT programs and cross-functional teams up to 1,000 people.','Created ML forecasting platform and benefit-based prioritization framework.','Led process optimization, team reorganization, risk/conflict management, IT budgeting and audits.']],
-    ['Sep 2018 – Feb 2019','GuruTaxi (guru.taxi)','Business Process Consultant',['Advised executives on workflow automation and internal systems; reduced operating costs.']],
-    ['Jun 2015 – Jul 2018','GetTaxi Rus (gettaxi.ru)','Head of Business Process Automation',['Owned driver app and partner/corporate platforms, e-document flow, and transport automation.','Drove growth via process modeling and A/B testing; reduced manual workload by 20,000 hours.']],
-    ['Nov 2013 – May 2015','System Expert (system-exp.ru)','Head of Design & Installation',['Delivered CCTV, ACS, IP telephony, and LAN projects; completed 200+ government projects.']],
-    ['Aug 2011 – Nov 2013','Sole Proprietor, Moscow','Owner / Systems Integrator',['Designed and deployed SCS for government institutions; completed 100+ projects.']],
-    ['Jul 2010 – Jul 2011','Russian Army, Khabarovsk Krai','Junior Sergeant, commander of sapper units',['Served in engineer troops, led sapper units and field operations.']],
-    ['Aug 2009 – May 2010','Center for Technology Transfer (rusttc.ru)','Manager',['Prepared IP documentation for Rosnano and Ministry of Defence projects; inventoried R&D outputs.']]
-  ],
-  ru: [
-    ['Март 2022 – настоящее время','Atom (АО «Кама»), Москва','Директор онлайн-сервисов',['Сформировал операционный контур стартапа электромобиля Atom: 15+ подразделений и команда 200+ человек.','Руководил стратегическим и финансовым планированием (бюджеты свыше 2 млрд ₽), оптимизировал IT, HR и финпроцессы.','Запустил ключевые сервисы: зарядная инфраструктура, управление парком, послепродажный сервис, удалённая диагностика; представлял компанию на госмероприятиях и у инвесторов в Китае.']],
-    ['Апрель 2021 – февраль 2022','KFC (YUM! Restaurants International Russia, CIS & CEE)','Руководитель технических решений и стандартов',['Сформировал цифровую стратегию для России, СНГ и ЦВЕ; внедрил цифровые платформы ресторанов.','Разработал технические стандарты, управлял подрядчиками, обеспечил технологический запуск новых рынков.','Курировал цифровую трансформацию, корпоративную архитектуру, стратегические планы и многолетнее бюджетирование.']],
-    ['Март 2019 – март 2021','KFC, Россия/СНГ/ЦВЕ','Руководитель проектного офиса',['Управлял портфелем ключевых IT-проектов и кросс-функциональными командами до 1 000 человек.','Создал ML-платформу прогнозирования и систему приоритизации по цифровой ценности.','Оптимизировал процессы, проводил реорганизацию, управлял рисками/конфликтами, отвечал за бюджет и аудит IT-финансов.']],
-    ['Сентябрь 2018 – февраль 2019','GuruTaxi (guru.taxi)','Консультант по бизнес-процессам',['Консультировал руководство по автоматизации документооборота и внутренних систем, снижал издержки.']],
-    ['Июнь 2015 – июль 2018','GetTaxi Rus (gettaxi.ru)','Руководитель автоматизации бизнес-процессов',['Отвечал за приложение водителя, партнёрский и веб-порталы, аналитику B2B, ЭДО и автоматизацию транспортного отдела.','Обеспечил рост пользователей через моделирование процессов и A/B-тесты; сократил ручной труд на 20 000 часов.']],
-    ['Ноябрь 2013 – май 2015','System Expert (system-exp.ru)','Руководитель проектирования и монтажа',['Реализовал проекты СВН, СКУД, IP-телефонии и ЛВС; завершил 200+ государственных проектов.']],
-    ['Август 2011 – ноябрь 2013','ИП, Москва','Собственник / системный интегратор',['Проектировал и внедрял СКС для госучреждений Москвы; завершил 100+ проектов.']],
-    ['Июль 2010 – июль 2011','Вооружённые силы РФ, Хабаровский край','Младший сержант, командир сапёрных отделений',['Служба в инженерных войсках, управление сапёрными подразделениями и задачами в полевых условиях.']],
-    ['Август 2009 – май 2010','Центр трансфера технологий (rusttc.ru)','Менеджер',['Подготавливал документацию по ИС для Роснано и Минобороны, проводил инвентаризацию результатов НИОКР.']]
-  ]
+const experience = [
+  { category:'auto', period:{ru:'Март 2022 — н.в.',en:'Mar 2022 — Present'}, company:'Atom (АО «Кама»)', role:{ru:'Директор департамента онлайн-сервисов',en:'Director of Online Services'}, details:{ru:'Построил структуру 15+ отделов и 200+ сотрудников; бюджетирование более 2 млрд ₽; запуск сервисов зарядки, автопарка и post-sale; развитие культуры и взаимодействие с органами власти.',en:'Built 15+ departments and 200+ employees structure; budgeted over ₽2B; launched charging, fleet and after-sales services; developed culture and government relations.'}},
+  { category:'foodtech', period:{ru:'Апр 2021 — Фев 2022',en:'Apr 2021 — Feb 2022'}, company:'KFC (YUM! Russia, CIS & CEE)', role:{ru:'Руководитель внедрения технических решений',en:'Head of Technical Solutions Deployment'}, details:{ru:'Запуск digital-стратегии, внедрение стандартов и платформ ресторанов, управление вендорами, поддержка запуска новых стран.',en:'Drove digital strategy, rolled out restaurant standards/platforms, managed vendors, enabled launches in new countries.'}},
+  { category:'foodtech', period:{ru:'Мар 2019 — Мар 2021',en:'Mar 2019 — Mar 2021'}, company:'KFC', role:{ru:'Руководитель проектного офиса',en:'Head of PMO'}, details:{ru:'Управление портфелем IT‑проектов; кросс-функциональные команды до 1000 человек; ML‑прогнозирование; оптимизация процессов и бюджетный контроль.',en:'Managed IT project portfolio; coordinated cross-functional teams up to 1,000; built ML forecasting; optimized processes and budget control.'}},
+  { category:'other', period:{ru:'2009 — 2019',en:'2009 — 2019'}, company:'GetTaxi / GuruTaxi / System Expert / ИП / Армия / ЦПТ', role:{ru:'Руководящие и экспертные роли',en:'Leadership & expert roles'}, details:{ru:'Автоматизация бизнес-процессов (20,000+ человеко‑часов экономии), 200+ гос‑проектов, внедрение инженерных и ИТ-решений.',en:'Business process automation (20,000+ man-hours saved), 200+ public projects, delivery of engineering and IT solutions.'}}
+];
+
+const skills = [
+  ['Управление проектами / Project Management', 95],
+  ['Оптимизация процессов / Process Optimization', 94],
+  ['Бизнес-анализ / Business Analysis', 90],
+  ['CAPEX / OPEX Budgeting', 92],
+  ['Управление персоналом / People Leadership', 93],
+  ['Cost Analysis / Audit', 89],
+  ['Контракт-менеджмент / Negotiation', 88],
+  ['Английский язык / English', 84]
+];
+
+const education = {
+  ru: ['Российская государственная академия интеллектуальной собственности, Москва (2010) — Экономика и менеджмент, управление интеллектуальной собственностью.'],
+  en: ['Russian State Academy of Intellectual Property, Moscow (2010) — Economics and Management, Intellectual Property Management.']
 };
 
-const skills = {
-  en: ['Project management','Business-process optimization','Business analysis','Project documentation','Proposal preparation','E-document flow','Technical specifications','Developer task setting','Analytical thinking','Prioritization','Cost analysis','Audit','Negotiations','Personnel management','Budgeting (Capex/Opex)','Organizational leadership','Contract management','Recruitment','Business correspondence','English proficiency','Event organization','Process weakness detection','Budget control','Teamwork','Cost optimization'],
-  ru: ['Управление проектами','Оптимизация бизнес-процессов','Бизнес-анализ','Проектная документация','Подготовка предложений','Электронный документооборот','Технические задания','Постановка задач разработчикам','Аналитическое мышление','Приоритизация','Анализ затрат','Аудит','Переговоры','Управление персоналом','Бюджетирование (Capex/Opex)','Организационное лидерство','Управление договорами','Подбор персонала','Деловая переписка','Английский язык','Организация мероприятий','Выявление слабых мест процессов','Управление бюджетом','Командная работа','Оптимизация затрат']
+const courses = {
+  ru: ['Бизнес-школа Eduson (2016).', '30+ бизнес-курсов: управление качеством, ораторское мастерство, переговоры, лидерство.'],
+  en: ['Eduson Business School (2016).', '30+ courses: quality management, public speaking, negotiations, leadership.']
 };
 
-function renderTimeline(lang){
-  const timeline = document.getElementById('timeline');
-  timeline.innerHTML = '';
-  experience[lang].forEach((job, idx) => {
-    const [date, company, role, bullets] = job;
-    const item = document.createElement('article');
-    item.className = 'job reveal';
-    item.style.transitionDelay = `${idx * 70}ms`;
-    item.innerHTML = `<div class="job-head"><div><div class="job-role"><i class="fa-solid fa-building"></i> ${role}</div><div class="job-meta">${company}</div></div><div class="job-meta">${date}</div></div><ul>${bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`;
-    timeline.appendChild(item);
-  });
-  setupReveal();
-}
+const testimonials = {
+  ru: ['«Дмитрий превращает сложные процессы в измеримый результат».', '«Сильный лидер, который объединяет людей и технологии».'],
+  en: ['“Dmitrii turns complexity into measurable execution.”', '“A strong leader who aligns people, processes and technology.”']
+};
 
-function renderSkills(lang){
-  const container = document.getElementById('skills-cloud');
-  container.innerHTML = skills[lang].map(s => `<span class="skill-badge reveal">${s}</span>`).join('');
-  setupReveal();
-}
+let lang = 'ru';
+let filter = 'all';
 
-function setLang(lang){
+const $ = (s) => document.querySelector(s);
+
+function applyI18n() {
   document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(node => {
+  document.querySelectorAll('[data-i18n]').forEach((node) => {
     const key = node.dataset.i18n;
-    if (t[lang][key]) node.textContent = t[lang][key];
+    if (content[lang][key]) node.textContent = content[lang][key];
   });
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    const active = btn.dataset.lang === lang;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-pressed', String(active));
+  document.querySelectorAll('.lang-btn').forEach((b) => {
+    const active = b.dataset.lang === lang;
+    b.classList.toggle('active', active);
+    b.setAttribute('aria-pressed', String(active));
   });
-  renderTimeline(lang);
-  renderSkills(lang);
 }
 
-function setupReveal(){
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
+function renderFilters() {
+  const labels = { all: 'All', auto: 'Auto', foodtech: 'Foodtech', other: 'Other' };
+  const root = $('#timelineFilters');
+  root.innerHTML = Object.entries(labels).map(([key, title]) => `<button class="filter-chip ${filter === key ? 'active':''}" data-filter="${key}">${title}</button>`).join('');
+  root.querySelectorAll('button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filter = btn.dataset.filter;
+      renderFilters();
+      renderTimeline();
     });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  });
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-setLang('en');
-setupReveal();
+function renderTimeline() {
+  const list = $('#timeline');
+  const rows = experience.filter((x) => filter === 'all' || x.category === filter);
+  list.innerHTML = rows.map((x, i) => `
+    <article class="timeline-item reveal" style="transition-delay:${i * 0.05}s">
+      <strong>${x.period[lang]}</strong>
+      <h3>${x.company}</h3>
+      <p>${x.role[lang]}</p>
+      <div class="more"><p>${x.details[lang]}</p></div>
+      <button class="timeline-toggle" type="button">${content[lang].detailsBtn}</button>
+    </article>
+  `).join('');
+  list.querySelectorAll('.timeline-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => btn.closest('.timeline-item').classList.toggle('open'));
+  });
+  observeReveal();
+}
+
+function renderLists() {
+  $('#educationList').innerHTML = education[lang].map((x) => `<li>${x}</li>`).join('');
+  $('#coursesList').innerHTML = courses[lang].map((x) => `<li>${x}</li>`).join('');
+  $('#testimonialsGrid').innerHTML = testimonials[lang].map((x) => `<blockquote>${x}</blockquote>`).join('');
+}
+
+function renderSkills() {
+  $('#skillsGrid').innerHTML = skills.map(([name, value]) => `
+    <article class="skill-card reveal">
+      <h4>${name}</h4>
+      <div class="meter"><i data-value="${value}"></i></div>
+    </article>
+  `).join('');
+  $('#sidebarSkills').innerHTML = skills.slice(0,4).map(([name, value]) => `
+    <div class="skill-inline">
+      <strong>${name}</strong>
+      <div class="meter"><i data-value="${value}"></i></div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+function observeReveal() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      const meter = entry.target.querySelector('.meter i');
+      if (meter) meter.style.width = `${meter.dataset.value}%`;
+    });
+  }, { threshold: 0.18 });
+
+  document.querySelectorAll('.reveal:not(.show)').forEach((el) => io.observe(el));
+}
+
+function bindUi() {
+  $('#themeToggle').addEventListener('click', () => {
+    const root = document.documentElement;
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      lang = btn.dataset.lang;
+      applyI18n();
+      renderAll();
+    });
+  });
+
+  const menuBtn = $('#mobileMenuBtn');
+  menuBtn.addEventListener('click', () => {
+    const sidebar = $('#sidebar');
+    sidebar.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(sidebar.classList.contains('open')));
+  });
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    $('.bg-1').style.transform = `translateY(${y * 0.08}px)`;
+    $('.bg-2').style.transform = `translateY(${y * 0.13}px)`;
+
+    const sections = [...document.querySelectorAll('main section')];
+    const active = sections.findLast((s) => y + 170 >= s.offsetTop)?.id;
+    document.querySelectorAll('.nav-link').forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${active}`));
+  });
+}
+
+function renderAll() {
+  renderFilters();
+  renderTimeline();
+  renderLists();
+  renderSkills();
+  observeReveal();
+}
+
+applyI18n();
+renderAll();
+bindUi();
