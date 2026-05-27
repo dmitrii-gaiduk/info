@@ -1,92 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional resume of Dmitrii Gaiduk, Operating Director (COO) / General Manager." />
-  <title>Dmitrii Gaiduk — Resume</title>
+  <meta name="description" content="Дмитрий Гайдук — операционный директор. 16+ лет в управлении, трансформации и масштабировании бизнеса." />
+  <meta property="og:title" content="Дмитрий Гайдук — Резюме" />
+  <meta property="og:description" content="Современное интерактивное резюме на русском языке." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMG_0033.jpeg" />
+  <title>Дмитрий Гайдук — Операционный директор</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8yQ4f1L3M6v8f0vZ4h7Yd2n6uYQm1wA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
-  <div class="page" role="document">
-    <aside class="sidebar" aria-label="Personal profile sidebar">
-      <div class="profile-photo-wrap">
-        <img src="IMG_0033.jpeg" alt="Portrait of Dmitrii Gaiduk" class="profile-photo" />
-      </div>
-      <h1 data-i18n="nameEn">Dmitrii Gaiduk</h1>
-      <p class="name-ru" data-i18n="nameRu">Гайдук Дмитрий Валерьевич</p>
-      <p class="headline" data-i18n="position">Operating Director (COO) / General Manager</p>
+  <div class="bg bg-a" aria-hidden="true"></div>
+  <div class="bg bg-b" aria-hidden="true"></div>
 
-      <ul class="detail-list" aria-label="Key personal details">
-        <li><i class="fa-solid fa-cake-candles"></i><span data-i18n="age">37 years old, born 14 Aug 1988</span></li>
-        <li><i class="fa-solid fa-location-dot"></i><span data-i18n="location">Moscow, Russia. Willing to relocate & travel.</span></li>
-        <li><i class="fa-solid fa-passport"></i><span data-i18n="citizenship">Russian citizenship. Authorized to work in Russia.</span></li>
-        <li><i class="fa-solid fa-briefcase"></i><span data-i18n="employment">Desired employment: Full-time, on-site.</span></li>
-        <li><i class="fa-solid fa-language"></i><span data-i18n="langs">Russian (native), English (C1 advanced).</span></li>
-        <li><i class="fa-solid fa-car"></i><span data-i18n="license">Driver's licence A, B; own car.</span></li>
+  <button id="menuBtn" class="menu-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">☰</button>
+
+  <header class="mobile-header" aria-label="Мобильная шапка">
+    <img src="IMG_0033.jpeg" alt="Портрет Дмитрия Гайдука" class="mobile-avatar" loading="lazy" />
+    <div class="mobile-title-wrap">
+      <h1 class="mobile-name">Дмитрий Гайдук</h1>
+      <p class="mobile-role">Операционный директор (COO)</p>
+      <p class="mobile-role">Исполнительный директор (CEO)</p>
+    </div>
+  </header>
+
+  <div class="page">
+    <aside id="sidebar" class="sidebar" aria-label="Профиль">
+      <div class="avatar-wrap"><img src="IMG_0033.jpeg" alt="Портрет Дмитрия Гайдука" class="avatar" loading="lazy" /></div>
+      <h1>Дмитрий Гайдук</h1>
+      <p class="role">Операционный директор (COO) / Исполнительный директор</p>
+
+      <ul class="facts">
+        <li>14 августа 1988 г. • 37 лет</li>
+        <li>Москва • готов к переезду и командировкам</li>
+        <li>Гражданство: Россия</li>
+        <li>Занятость: полная, офис</li>
+        <li>Языки: русский (родной), английский (C1)</li>
+        <li>Права: категории A и B • личный автомобиль</li>
       </ul>
 
-      <div class="quick-contacts" aria-label="Quick contacts">
-        <a href="tel:+79629116660"><i class="fa-solid fa-phone"></i> +7 (962) 911-6660</a>
-        <a href="mailto:dv-aid@mail.ru"><i class="fa-solid fa-envelope"></i> dv-aid@mail.ru</a>
-        <a href="https://wa.me/79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://t.me/+79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#about" class="nav-link">Обо мне</a>
+        <a href="#experience" class="nav-link">Опыт работы</a>
+        <a href="#education" class="nav-link">Образование</a>
+        <a href="#skills" class="nav-link">Навыки</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="sidebar-skills" id="sidebarSkills"></div>
+
+      <div class="controls">
+        <button id="themeBtn" class="chip" aria-label="Переключить тему">🌗 Тема</button>
+        <a href="resume.pdf" download class="btn">Скачать PDF</a>
       </div>
     </aside>
 
-    <main class="main-content" aria-label="Resume content">
-      <header class="main-header">
-        <nav class="tabs" aria-label="Resume sections navigation">
-          <a href="#about" data-i18n="tabAbout">About</a>
-          <a href="#experience" data-i18n="tabExp">Experience</a>
-          <a href="#education" data-i18n="tabEdu">Education</a>
-          <a href="#skills" data-i18n="tabSkills">Skills</a>
-          <a href="#contacts" data-i18n="tabContacts">Contacts</a>
-        </nav>
-        <div class="lang-switcher" role="group" aria-label="Language switcher">
-          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+    <main class="content">
+      <section id="about" class="card reveal">
+        <span class="eyebrow">Executive Profile</span>
+        <h2>Обо мне</h2>
+        <p>Более 16 лет управляю операционной, технической и коммерческой деятельностью в международных компаниях. Создавал департаменты с нуля, руководил командами до 1000 человек, реализовывал цифровые трансформации, снижал затраты и повышал эффективность процессов. Экспертиза: оргструктуры, бюджетирование CAPEX/OPEX, запуск IT‑продуктов и работа с государственными структурами.</p>
+        <div class="about-visuals" aria-label="Ключевые показатели">
+          <div class="kpi-tile"><span>16+</span><small>лет опыта</small></div>
+          <div class="kpi-tile"><span>1000</span><small>чел. в командах</small></div>
+          <div class="kpi-tile"><span>2+ млрд ₽</span><small>под управлением</small></div>
+          <div class="kpi-tile"><span>20 000+</span><small>часов автоматизации</small></div>
         </div>
-      </header>
-
-      <section id="about" class="section reveal" aria-labelledby="about-title">
-        <h2 id="about-title"><i class="fa-solid fa-user-tie"></i> <span data-i18n="aboutTitle">About me</span></h2>
-        <p data-i18n="aboutText"></p>
+        <div class="about-graphics" aria-hidden="true"><i></i><i></i><i></i></div>
       </section>
 
-      <section id="experience" class="section" aria-labelledby="exp-title">
-        <h2 id="exp-title" class="reveal"><i class="fa-solid fa-briefcase"></i> <span data-i18n="expTitle">Experience</span></h2>
+      <section id="experience" class="card">
+        <h2>Опыт работы</h2>
         <div id="timeline" class="timeline"></div>
       </section>
 
-      <section id="education" class="section reveal" aria-labelledby="edu-title">
-        <h2 id="edu-title"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="eduTitle">Education</span></h2>
-        <div class="card">
-          <p data-i18n="eduMain"></p>
-          <p data-i18n="eduCourses"></p>
+      <section id="education" class="card reveal">
+        <h2>Образование</h2>
+        <ul>
+          <li>Российская государственная академия интеллектуальной собственности (Москва, 2010), «Экономика и менеджмент», управление интеллектуальной собственностью.</li>
+        </ul>
+      </section>
+
+      <section id="skills" class="card reveal">
+        <h2>Навыки</h2>
+        <div id="skillsGrid" class="skills-grid"></div>
+      </section>
+
+      <section id="testimonials" class="card reveal">
+        <h2>Отзывы / Highlights</h2>
+        <div class="quotes">
+          <blockquote>«Дмитрий превращает сложные процессы в измеримый результат».</blockquote>
+          <blockquote>«Сильный лидер, который объединяет людей, данные и технологии».</blockquote>
         </div>
       </section>
 
-      <section id="skills" class="section reveal" aria-labelledby="skills-title">
-        <h2 id="skills-title"><i class="fa-solid fa-gears"></i> <span data-i18n="skillsTitle">Skills</span></h2>
-        <div id="skills-cloud" class="skills-cloud"></div>
-      </section>
-
-      <section id="contacts" class="section reveal" aria-labelledby="contacts-title">
-        <h2 id="contacts-title"><i class="fa-solid fa-address-card"></i> <span data-i18n="contactsTitle">Contacts</span></h2>
-        <div class="contact-grid">
-          <a href="tel:+79629116660"><i class="fa-solid fa-phone"></i> +7 (962) 911-6660</a>
-          <a href="mailto:dv-aid@mail.ru"><i class="fa-solid fa-envelope"></i> dv-aid@mail.ru</a>
-          <a href="https://wa.me/79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a href="https://t.me/+79629116660" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <section id="contacts" class="card reveal">
+        <h2>Контакты</h2>
+        <div class="contacts">
+          <a href="tel:+79629116660">📞 +7 (962) 911‑6660</a>
+          <a href="mailto:dv-aid@mail.ru">✉️ dv-aid@mail.ru</a>
+          <a href="https://wa.me/79629116660" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
         </div>
-        <a class="cta" href="mailto:dv-aid@mail.ru" data-i18n="cta">Let’s discuss opportunities</a>
+        <a href="mailto:dv-aid@mail.ru" class="btn">Связаться</a>
       </section>
     </main>
   </div>
